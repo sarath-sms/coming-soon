@@ -1,0 +1,145 @@
+:root {
+  --primary: #ffeb3b;
+  --secondary: #26355d;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--secondary) 40%, #fdfdfd 100%);
+  color: var(--secondary);
+  overflow-x: hidden;
+}
+
+.coming-soon-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Decorative floating circles */
+.coming-soon-container::before,
+.coming-soon-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  background: var(--primary);
+  z-index: 0;
+}
+
+.coming-soon-container::before {
+  width: 180px;
+  height: 180px;
+  top: 10%;
+  left: 15%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.coming-soon-container::after {
+  width: 250px;
+  height: 250px;
+  bottom: 5%;
+  right: 10%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(20px); }
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.main-title .highlight {
+  color: var(--primary);
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--primary);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.highlight-box {
+  background-color: white;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 20px 30px;
+  font-size: 1.1rem;
+  color: var(--secondary);
+  max-width: 500px;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+
+.highlight-box .secondary {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.pincode-section {
+  margin-bottom: 25px;
+  z-index: 1;
+}
+
+.pincode-title {
+  font-weight: 600;
+  color: white;
+}
+
+.pincode-list {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.launch-info {
+  background: var(--primary);
+  border-radius: 12px;
+  padding: 15px 25px;
+  max-width: 520px;
+  box-shadow: 0 4px 10px rgba(255, 235, 59, 0.3);
+  color: var(--secondary);
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.launch-info span {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.launch-date {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.testing-text {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: var(--primary);
+  position: relative;
+  z-index: 1;
+}
