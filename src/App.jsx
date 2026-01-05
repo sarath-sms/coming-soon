@@ -56,7 +56,7 @@ function App() {
         transition={{ delay: 1.8, duration: 0.8 }}
       >
         <p className="launch-date">
-          🎉 Happily Opening from: <span>1st Jan 2026</span>
+          🎉 Happily Opening from: <span>22nd Jan 2026</span>
         </p>
         <p className="testing-text">
           Before that, for testing purposes, our shop will open & close on random days.
